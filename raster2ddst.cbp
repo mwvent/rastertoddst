@@ -12,7 +12,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-g" />
+					<Add option="-g -lm" />
 				</Compiler>
 			</Target>
 			<Target title="Release">
@@ -21,7 +21,7 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-O2" />
+					<Add option="-O2 -lm" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -36,11 +36,8 @@
 			<Add library="libcupsimage" />
 			<Add library="libcupsfilters" />
 			<Add library="jbig" />
+			<Add library="libm" />
 		</Linker>
-		<Unit filename="halftone.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="halftone.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
